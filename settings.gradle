@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MyAndroid"
-include ':step01Activitu'
+include ':step01activity'
+include ':step01activity2'
