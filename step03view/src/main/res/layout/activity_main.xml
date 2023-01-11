@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--
+        UI 에 아이디를 부여하면 아이디도 resource 로 관리가 된다.
+        아이디에 고유한 정수값이 부여가 되고
+        R 클래스에서 자동 등록이 된다.
+        class R {
+            public static class layout{
+                public static final int activity_main = xxx ;
+            }
+            public static class id{
+                public static final int inputMsg = xxx;
+                public static final int sendBtn = xxx;
+            }
+        }
+    -->
+
     <EditText
         android:id="@+id/inputMsg"
         android:layout_width="0dp"
