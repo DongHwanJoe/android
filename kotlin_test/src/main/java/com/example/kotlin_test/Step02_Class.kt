@@ -33,6 +33,28 @@ class AirPlane3{
     }
 }
 
+/*
+    public class Person{
+        public String name;
+        public Person(String name){
+            this.name = name;
+        }
+    }
+ */
+
+class Person constructor(name: String){
+    //필드 선언
+    var name:String
+
+    init{
+        this.name=name
+    }
+}
+
+//위의 클래스를 조금 더 간단하게 선언하기
+class Person2(var name:String)
+//var or val을 생성자의 인자에 선언하면 전달받은 값이 자동으로 같은 이름의 필드가 만들어지고 값이 들어간다.
+
 fun main() {
     var c1 = MyCar()
     var c2 = YourCar()
@@ -41,4 +63,10 @@ fun main() {
     AirPlane()
     AirPlane2()
     AirPlane3()
+
+    val p1 = Person("김구라")
+    println(p1.name)
+
+    val p2 = Person2("해골")
+    println(p2.name)
 }
