@@ -17,6 +17,7 @@ class Cat constructor(){
         println("cat name:${name}")
         this.name=name
     }
+
 }
 
 fun main() {
