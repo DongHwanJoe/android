@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity implements MyFragment.MyFragmentListener{
@@ -13,7 +14,8 @@ public class MainActivity extends AppCompatActivity implements MyFragment.MyFrag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main2);
         //전개된 view에는 MyFragment 객체가 두 개 있다. 만일 해당 객체의 참조값이 액티비티에서 필요하다면
 
         //FragmentManager 객체의 참조값을 얻어내서
@@ -21,6 +23,10 @@ public class MainActivity extends AppCompatActivity implements MyFragment.MyFrag
         //해당객체의 메소드를 활용해 fragement의 참조값을 얻어낸다.
         mf1 = (MyFragment) fm.findFragmentById(R.id.fragment1);
         mf2 = (MyFragment) fm.findFragmentById(R.id.fragment2);
+
+        //FragmentContainerView의 참조값이 필요하다면 액티비티의 메소드를 이용해서 얻어낼 수 있다.
+        FragmentContainerView container1 = findViewById(R.id.fragment1);
+        FragmentContainerView container2 = findViewById(R.id.fragment2);
     }
 
 
