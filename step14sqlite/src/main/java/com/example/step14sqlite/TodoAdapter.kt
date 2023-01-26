@@ -31,14 +31,12 @@ class TodoAdapter(var context:Context, var layoutRes:Int, var list:List<Todo>) :
 
     //인자로 전달된 cell view를 리턴
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var resultView:View
-        if(convertView == null){ //null 이면
-            //layout xml 문서를 전개해서 View를 얻어내고
-            resultView = LayoutInflater.from(context)
-                    .inflate(layoutRes, parent, false)
-        }else{//null이 아니면 인자로 전달된 View를 사용한다.
-            resultView = convertView
-        }
+
+        //kotlin에서 메소드의 매개변수는 상수(val)이기 때문에 값 변경이 불가하다.
+        var resultView:View = if(convertView == null)
+                                    LayoutInflater.from(context).inflate(layoutRes, parent, false)
+                              else convertView
+
         //position에 해당하는 할 일 정보를 얻어와서
         val data = list.get(position)
 
