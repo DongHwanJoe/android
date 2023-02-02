@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener, OnItemLongClick
         //할 일 목록 얻어오기
         val list = TodoDao(helper).getList()
         //ListView 동작 준비하고, 할 일 목록 출력하기
+
         adapter = TodoAdapter(this, R.layout.listview_cell, list)
         //ListView에 Adapter 연결하기
         listView.adapter = adapter
