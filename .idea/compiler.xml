@@ -26,7 +26,6 @@
       <module name="MyAndroid.step17httprequest" target="11" />
       <module name="MyAndroid.step17httprequest2" target="11" />
       <module name="MyAndroid.step17httprequest3" target="11" />
-      <module name="MyAndroid.step18login" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
